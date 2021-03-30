@@ -20,7 +20,6 @@ class User(Base):
 class Planet(Base):
     __tablename__ = 'Planet'
     id=Column(Integer, primary_key=True)
-    favorite_id=Column(Integer, ForeignKey('Favorite.id'))
     name=Column(String(250), nullable=False)
     climate=Column(String(250), nullable=False)
     population=Column(Integer, nullable=False)
@@ -31,7 +30,6 @@ class Planet(Base):
 class Character(Base):
     __tablename__ = 'Character'
     id=Column(Integer, primary_key=True)
-    favorite_id=Column(Integer, ForeignKey('Favorite.id'))
     name=Column(String(250), nullable=False)
     birth=Column(String(250), nullable=False)
     gender=Column(String(250))
